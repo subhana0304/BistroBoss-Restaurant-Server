@@ -203,7 +203,7 @@ async function run() {
     })
 
     // for admin home
-    app.get('/admin-stats', verifyJWT, verifyAdmin, async(req, res) =>{
+    app.get('/admin-stats', verifyJWT, verifyAdmin,  async(req, res) =>{
       const users = await userCollection.estimatedDocumentCount();
       const products = await menuCollection.estimatedDocumentCount();
       const orders = await paymentCollection.estimatedDocumentCount();
